@@ -25,8 +25,11 @@ SECRET_KEY = 'django-insecure-n+1qhzoau-5%a=*4@m(ne%v==us^#g*4#aeibrhf4e4hs67gg&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '.vercel.app']
 
+
+#extra inclusion
+# SITE_ID=1
 
 # Application definition
 
@@ -41,6 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    #extra inclusions for API of social sites
+    # "django.contrib.sites",
+    # "allauth",
+    # "allauth.account",
+    # "allauth.socialaccount",
+    # "allauth.socialaccount.providers.google"
 ]
 
 MIDDLEWARE = [
@@ -158,3 +168,18 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 # EMAIL_USE_TLS = True
 # EMAIL_HOST_USER = "blogspot.anand@gmail.com"
 # EMAIL_HOST_PASSWORD = "xesuinrkraoffmzl"
+
+#Extra inclusions
+# SOCIALACCOUNT_PROVIDERS = {
+#     "google":{
+#         "SCOPE": [
+#             "profile",
+#             "email"
+#         ],
+#         "AUTH_PARAMS": {"access_type": "online"}
+#     }
+# }
+# AUTHENTICATION_BACKENDS = (
+#     "django.contrib.auth.backends.ModelsBackend",
+#     "allauth.accounts.aut_backends.AuthenticationBackend"
+# )

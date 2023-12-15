@@ -7,7 +7,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "fullstack_blogging/wsgi.py"
+            "dest": "main.py"
         }
     ]
 }
